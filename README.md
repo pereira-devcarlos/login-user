@@ -18,10 +18,9 @@ login/
 │   ├── database/
 │   │   └── conexao.php
 │   ├── controllers/
-│   │   ├── autenticar.php
-│   │   ├── cadastrar.php
-│   │   └── processar_dados.php
-├── .htaccess (opcional, segurança em servidor Apache)
+│       ├── autenticar.php
+│       ├── cadastrar.php
+│       └── processar_dados.php
 └── README.md
 
 
