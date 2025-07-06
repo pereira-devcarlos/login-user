@@ -7,7 +7,7 @@ login/
 │   │   ├── global.css
 │   │   └── painel.css
 │   ├── img/
-│   ├── index.php             # Tela inicial ou login
+│   ├── index.php             # Tela Inicial de login
 │   ├── cadastro.php          # Tela de cadastro
 │   ├── dados.php             # Tela de atualizar dados
 │   └── painel/               # Subpasta para arquivos da área logada
