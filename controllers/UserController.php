@@ -9,7 +9,12 @@
                     'senha' => password_hash($_POST['senha'], PASSWORD_DEFAULT),
                     'perfil' => $_POST['perfil']
                 ];
-                
+
+                User::create($data);
+
+                header('Location: index.php');
+            } else {
+                include 'views/register.php';
             }
         } 
     }
