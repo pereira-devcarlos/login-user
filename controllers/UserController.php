@@ -37,6 +37,11 @@
                 echo 'Você não tem permissão para editar usuários';
             }
         }
+
+        public function list(){
+            $users = User::all();
+            include 'views/listUser.php';
+        }
     }
 
 ?>

@@ -40,6 +40,12 @@
 
             $stmt->execute($data);
         }
+
+        public static function all(){
+            $conn = Database::getConnection();
+            $stmt = $conn->prepare("SELECT * FROM usuarios");
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
     }
 
 ?>
