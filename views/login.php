@@ -23,7 +23,15 @@
         -moz-user-select: none;
         user-select: none;
       }
-
+      .alert-custom {
+        color: #fff;
+        background: #dc3545;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      }
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -56,6 +64,13 @@
         <input type="checkbox" value="remember-me"> Relembrar Senha
       </label>
     </div>
+
+  <?php if (isset($error)): ?>
+    <div class="alert alert-custom" role="alert">
+      <?= htmlspecialchars($error) ?>
+    </div>
+  <?php endif; ?>
+
     <button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
     <p>Não possui uma conta? <a href="index.php?action=register">Cadastra-se</a></p>
     <p class="mt-5 mb-3 text-muted">&copy; Carlos Pereira</p>

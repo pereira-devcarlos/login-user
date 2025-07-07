@@ -19,7 +19,9 @@
 
                     header('Location: index.php?action=dashboard');
                 } else {
-                    echo "Email ou senha incorretos";
+                    // Passar mensagem de erro para a view
+                    $error = 'Email ou senha inválidos. Por favor, tente novamente.';
+                    include 'views/login.php';
                 }
             } else {
                 include 'views/login.php';
