@@ -1,0 +1,92 @@
+/* Definir estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Container principal */
+.container {
+    max-width: 960px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o título */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Estilo da tabela */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo dos botões */
+.btn {
+    text-decoration: none;
+    background-color: #009879;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #007a65;
+}
+
+.btn-delete {
+    background-color: #ff4b5c;
+}
+
+.btn-delete:hover {
+    background-color: #d43f4b;
+}
+
+/* Estilos específicos para o admin */
+.admin .container {
+    border-left: 5px solid #009879;
+}
+
+/* Estilos específicos para o gestor */
+.gestor .container {
+    border-left: 5px solid #ffcc00;
+}
+
+/* Estilos específicos para o colaborador */
+.colaborador .container {
+    border-left: 5px solid #007bff;
+}
