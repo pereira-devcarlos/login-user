@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Usuário</title>
-    <link rel="stylesheet" href="../css/edit.css">
+    <link rel="stylesheet" href="css/edit.css">
 </head>
 
 <body class="edit-body">
