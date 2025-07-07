@@ -56,7 +56,7 @@
       </label>
     </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
-    <p>Não possui uma conta? <a href="#">Cadastra-se</a></p>
+    <p>Não possui uma conta? <a href="index.php?action=register">Cadastra-se</a></p>
     <p class="mt-5 mb-3 text-muted">&copy; Carlos Pereira</p>
   </form>
 </main>
