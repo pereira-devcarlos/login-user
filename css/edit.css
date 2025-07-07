@@ -1,0 +1,73 @@
+/* Estilo geral para o corpo da página de edição */
+.edit-body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container para o formulário de edição */
+.edit-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+}
+
+/* Estilo para o título */
+.edit-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilo geral para os rótulos e inputs do formulário */
+.edit-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.edit-form input,
+.edit-form select {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Estilo para o botão de salvar */
+.edit-form .btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 90%;
+    font-size: 16px;
+}
+
+.edit-form .btn:hover {
+    background-color: #218838;
+}
+
+/* Estilo para o link de voltar */
+.back-link {
+    display: block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
