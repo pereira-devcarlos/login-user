@@ -33,6 +33,10 @@ body.admin h1 {
     color: #ffcc00;
 }
 
+body.admin p{
+    margin-bottom: 20px;
+}
+
 body.admin .btn {
     background-color: #ffcc00;
     color: black;
@@ -58,6 +62,10 @@ body.gestor .container {
 
 body.gestor h1 {
     color: #ffd700;
+}
+
+body.gestor p {
+    margin-bottom: 20px;
 }
 
 body.gestor .btn {
@@ -87,6 +95,10 @@ body.colaborador h1 {
     color: #f4f4f4;
 }
 
+body.colaborador p {
+    margin-bottom: 20px;
+}
+
 body.colaborador .btn {
     background-color: #ffffff;
     color: #3f7c4f;
@@ -98,4 +110,9 @@ body.colaborador .btn {
 
 body.colaborador .btn:hover {
     background-color: #e6e6e6;
+}
+
+body a {
+    text-decoration: none;
+    color: inherit;
 }

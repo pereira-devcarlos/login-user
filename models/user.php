@@ -43,7 +43,7 @@
 
         public static function all(){
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("SELECT * FROM usuarios");
+            $stmt = $conn->query("SELECT * FROM usuarios");
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
     }
