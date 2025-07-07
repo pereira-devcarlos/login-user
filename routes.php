@@ -1,11 +1,13 @@
 <?php 
     require 'controllers/AuthController.php';
     require 'controllers/UserController.php';
+    require 'controllers/DashboardController.php';
 
 
     // Cria instância de controlador
     $authController = new AuthController();
     $userController = new UserController();
+    $dashController = new DashboardController();
 
     $action = $_GET['action'] ?? 'login';
 
@@ -20,7 +22,7 @@
             $userController->list();
             break;
         case 'dashboard':
-            
+            $dashController->index();
             break;
         case 'edit':
             $id = $_GET['id'];
