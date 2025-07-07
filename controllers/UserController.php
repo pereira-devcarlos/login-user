@@ -28,12 +28,13 @@
                         'email' => $_POST['email'],
                         'perfil' => $_POST['perfil']
                     ];
+                    User::update($id, $data);
+                    header('Location: indedx.php?action=list');
+                } else {
+                    include 'views/editUser.php';
                 }
-
-                User::update($id, $data);
-                header('Location: indedx.php?action=list');
             } else {
-                include 'views/editUser.php';
+                echo 'Você não tem permissão para editar usuários';
             }
         }
     }
