@@ -33,7 +33,7 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="../css/signin.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
   </head>
   <body class="text-center">
     
@@ -56,6 +56,7 @@
       </label>
     </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
+    <p>Não possui uma conta? <a href="#">Cadastra-se</a></p>
     <p class="mt-5 mb-3 text-muted">&copy; Carlos Pereira</p>
   </form>
 </main>
