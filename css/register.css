@@ -44,6 +44,11 @@
     font-size: 14px;
 }
 
+.register-form input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
 /* Estilo para o botão de enviar */
 .register-form .btn {
     background-color: #007BFF;
@@ -69,5 +74,15 @@
 }
 
 .back-link:hover {
+    text-decoration: underline;
+}
+
+.register-container a {
+    color: #181818;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #193c70;
     text-decoration: underline;
 }
