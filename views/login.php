@@ -38,15 +38,15 @@
   <body class="text-center">
     
 <main class="form-signin">
-  <form>
+  <form method="post">
     <h1 class="h3 mb-3 fw-normal">Login</h1>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
       <label for="floatingInput">Email </label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" class="form-control" name="senha" id="floatingPassword" placeholder="Password">
       <label for="floatingPassword">Senha</label>
     </div>
 
