@@ -1,0 +1,101 @@
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Estilo para Admin */
+body.admin {
+    background-color: #1e2a38;
+    color: white;
+}
+
+body.admin .container {
+    background-color: #2f3e4f;
+}
+
+body.admin h1 {
+    color: #ffcc00;
+}
+
+body.admin .btn {
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body.admin .btn:hover {
+    background-color: #e6b800;
+}
+
+/* Estilo para Gestor */
+body.gestor {
+    background-color: #3a5f78;
+    color: white;
+}
+
+body.gestor .container {
+    background-color: #4a738e;
+}
+
+body.gestor h1 {
+    color: #ffd700;
+}
+
+body.gestor .btn {
+    background-color: #ffd700;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body.gestor .btn:hover {
+    background-color: #e6c300;
+}
+
+/* Estilo para Colaborador */
+body.colaborador {
+    background-color: #3f7c4f;
+    color: white;
+}
+
+body.colaborador .container {
+    background-color: #509d66;
+}
+
+body.colaborador h1 {
+    color: #f4f4f4;
+}
+
+body.colaborador .btn {
+    background-color: #ffffff;
+    color: #3f7c4f;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body.colaborador .btn:hover {
+    background-color: #e6e6e6;
+}
