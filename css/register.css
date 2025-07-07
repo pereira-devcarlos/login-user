@@ -1,0 +1,73 @@
+/* Estilo geral para o corpo da página de registro */
+.register-body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container para o formulário de registro */
+.register-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+}
+
+/* Estilo para o título */
+.register-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilo geral para os rótulos e inputs do formulário */
+.register-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.register-form input,
+.register-form select {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Estilo para o botão de enviar */
+.register-form .btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 90%;
+    font-size: 16px;
+}
+
+.register-form .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para o link de voltar */
+.back-link {
+    display: block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
