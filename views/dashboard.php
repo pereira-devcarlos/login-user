@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" type='text/css' media='screen' href="css/style.css">
+    <link rel="stylesheet" type='text/css' media='screen' href="../css/style.css">
 </head>
 
-<body class="<?= $_SESSION['perfil'] ?>"> <!-- Define a classe com base no perfil -->
+<!-- Define a classe com base no perfil -->
+<body class="<?= $_SESSION['perfil'] ?>"> 
+
     <div class="container">
         <h1>Bem-vindo, <?= $_SESSION['perfil'] ?>!</h1>
         <p>Esta é a visão do perfil <?= $_SESSION['perfil'] ?>.</p>

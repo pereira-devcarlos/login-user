@@ -16,7 +16,14 @@
             } else {
                 include 'views/register.php';
             }
-        } 
+        }
+        
+        public function edit(){
+            session_start();
+            if($_SESSION['perfil'] == 'admin' || $_SESSION['perfil'] == 'gestor'){
+                $user = User::find($id);
+            }
+        }
     }
 
 ?>

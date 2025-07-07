@@ -16,6 +16,9 @@
         case 'register':
             $userController->register();
             break;
+        case 'dashboard':
+            // Directamente para o dashboard
+                include 'views/dashboard.php';
         default:
             $authController->login();
             break;
