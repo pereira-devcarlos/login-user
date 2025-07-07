@@ -65,7 +65,7 @@ body.gestor h1 {
 }
 
 body.gestor p {
-    margin-bottom: 20px;
+    margin: 25px 0;
 }
 
 body.gestor .btn {
@@ -96,7 +96,7 @@ body.colaborador h1 {
 }
 
 body.colaborador p {
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 body.colaborador .btn {
