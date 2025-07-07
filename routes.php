@@ -19,6 +19,13 @@
         case 'list':
             $userController->list();
             break;
+        case 'dashboard':
+            
+            break;
+        case 'edit':
+            $id = $_GET['id'];
+            $userController->edit($id);
+            break;
         default:
             $authController->login();
             break;
