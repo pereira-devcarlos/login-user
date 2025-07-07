@@ -18,7 +18,7 @@
             }
         }
         
-        public function edit(){
+        public function edit($id){
             session_start();
             if($_SESSION['perfil'] == 'admin' || $_SESSION['perfil'] == 'gestor'){
                 $user = User::find($id);
@@ -30,7 +30,10 @@
                     ];
                 }
 
-                
+                User::update($id, $data);
+                header('Location: indedx.php?action=list');
+            } else {
+                include 'views/editUser.php';
             }
         }
     }
