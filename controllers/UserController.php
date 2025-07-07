@@ -22,6 +22,15 @@
             session_start();
             if($_SESSION['perfil'] == 'admin' || $_SESSION['perfil'] == 'gestor'){
                 $user = User::find($id);
+                if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                    $data = [
+                        'nome' => $_POST['nome'],
+                        'email' => $_POST['email'],
+                        'perfil' => $_POST['perfil']
+                    ];
+                }
+
+                
             }
         }
     }
