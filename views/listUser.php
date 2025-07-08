@@ -43,7 +43,7 @@ if (isset($_SESSION['perfil'])):
 
                                 <!-- Permitir que apenas admin exclua -->
                                 <?php if ($_SESSION['perfil'] == 'admin'): ?>
-                                    <a href="index.php?action=delete&id=<?= $user['id'] ?>" class="btn-edit btn-delete" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+                                    <a href="#" class="btn-edit btn-delete" data-user-id="<?= $user['id'] ?>">Excluir</a>
                                 <?php endif; ?>
                             </td>
                         </tr>
@@ -52,8 +52,46 @@ if (isset($_SESSION['perfil'])):
                 </tbody>
             </table>
 
+            <!-- Modal de confirmação -->
+            <div id="modalConfirm" class="modal-confirm-bg" style="display:none;">
+              <div class="modal-confirm-box">
+                <h3>Confirmar exclusão</h3>
+                <p>Tem certeza que deseja excluir este usuário?</p>
+                <div class="modal-confirm-actions">
+                  <button id="btnCancel" class="btn-edit" type="button">Cancelar</button>
+                  <a id="btnConfirmDelete" href="index.php?action=delete&id=<?= $user['id'] ?>" class="btn-edit btn-delete">Excluir</a>
+                </div>
+              </div>
+            </div>
+
             <a href="index.php?action=dashboard" class="btn">Voltar ao Dashboard</a>
         </div>
+
+        <script>
+          document.querySelectorAll('.btn-delete').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+              e.preventDefault();
+              var userId = this.getAttribute('data-user-id');
+              var modal = document.getElementById('modalConfirm');
+              var confirmBtn = document.getElementById('btnConfirmDelete');
+              confirmBtn.href = 'index.php?action=delete&id=' + userId;
+              modal.classList.add('show');
+              modal.style.display = 'flex';
+            });
+          });
+          document.getElementById('btnCancel').onclick = function() {
+            var modal = document.getElementById('modalConfirm');
+            modal.classList.remove('show');
+            setTimeout(function(){ modal.style.display = 'none'; }, 350);
+          };
+          document.getElementById('modalConfirm').onclick = function(e) {
+            if (e.target === this) {
+              this.classList.remove('show');
+              var modal = this;
+              setTimeout(function(){ modal.style.display = 'none'; }, 350);
+            }
+          };
+        </script>
     </body>
 
     </html>

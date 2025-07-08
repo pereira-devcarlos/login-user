@@ -21,13 +21,6 @@
             <label for="senha">Senha:</label>
             <input type="password" name="senha" id="senha" required>
 
-            <label for="perfil">Perfil:</label>
-            <select name="perfil" id="perfil">
-                <option value="admin">Admin</option>
-                <option value="gestor">Gestor</option>
-                <option value="colaborador">Colaborador</option>
-            </select>
-
             <button type="submit" class="btn">Cadastrar</button>
         </form>
         <a href="index.php?action=login" class="back-link">Voltar ao Login</a>

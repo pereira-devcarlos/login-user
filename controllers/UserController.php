@@ -7,7 +7,7 @@
                     'nome' => $_POST['nome'],
                     'email' => $_POST['email'],
                     'senha' => password_hash($_POST['senha'], PASSWORD_DEFAULT),
-                    'perfil' => $_POST['perfil']
+                    'perfil' => $_POST['perfil'] ?? 'colaborador' // Define 'colaborador' como padrão se não for enviado
                 ];
 
                 User::create($data);

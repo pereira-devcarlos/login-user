@@ -62,6 +62,9 @@ h2 {
     margin-right: 10px;
     display: inline-block;
     text-align: center;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .btn-edit:hover {
@@ -124,4 +127,44 @@ h2 {
 /* Estilos específicos para o colaborador */
 .colaborador .container {
     border-left: 5px solid #007bff;
+}
+
+/* Estilos para o modal de confirmação de exclusão */
+.modal-confirm-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+.modal-confirm-bg.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal-confirm-box {
+    background: #fff;
+    border-radius: 8px;
+    padding: 30px 24px 20px 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    text-align: center;
+    min-width: 300px;
+    max-width: 90vw;
+}
+.modal-confirm-box h3 {
+    margin-top: 0;
+    color: #d43f4b;
+}
+.modal-confirm-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+@media (max-width: 500px) {
+    .modal-confirm-box { padding: 18px 6px; }
 }
