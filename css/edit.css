@@ -71,3 +71,25 @@
 .back-link:hover {
     text-decoration: underline;
 }
+
+/* Estilo para o campo de perfil adicionado para usuários não administradores */
+.edit-form .perfil-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.edit-form .perfil-row label {
+    margin-bottom: 0;
+    margin-right: 10px;
+    min-width: 60px;
+}
+
+.edit-form .perfil-info {
+    font-weight: bold;
+    color: #555;
+    margin: 0;
+    height: 38px;
+    display: flex;
+    align-items: center;
+}

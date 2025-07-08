@@ -20,16 +20,31 @@
         
         public function edit($id){
             session_start();
-            if($_SESSION['perfil'] == 'admin' || $_SESSION['perfil'] == 'gestor'){
+            if($_SESSION['perfil'] == 'admin'){
                 $user = User::find($id);
                 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                    // Admin pode editar todos os campos
                     $data = [
                         'nome' => $_POST['nome'],
                         'email' => $_POST['email'],
                         'perfil' => $_POST['perfil']
                     ];
                     User::update($id, $data);
-                    header('Location: indedx.php?action=list');
+                    header('Location: index.php?action=list');
+                } else {
+                    include 'views/editUser.php';
+                }
+            } else if($_SESSION['perfil'] == 'gestor'){
+                $user = User::find($id);
+                if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                    // Gestor pode editar apenas nome e email
+                    $data = [
+                        'nome' => $_POST['nome'],
+                        'email' => $_POST['email'],
+                        'perfil' => $user['perfil'] // Mantém o perfil original
+                    ];
+                    User::update($id, $data);
+                    header('Location: index.php?action=list');
                 } else {
                     include 'views/editUser.php';
                 }
