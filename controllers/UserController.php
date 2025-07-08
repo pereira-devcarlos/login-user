@@ -59,6 +59,11 @@
             $users = User::all();
             include 'views/listUser.php';
         }
+
+        public function delete($id){
+            User::delete($id);
+            header('Location: index.php?action=list');
+        }
     }
 
 ?>
