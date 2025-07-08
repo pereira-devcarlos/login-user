@@ -11,7 +11,7 @@
 <body class="register-body">
     <div class="register-container">
         <h2>Cadastro de Usuário</h2>
-        <form method="post" action="index.php?action=register" class="register-form">
+        <form method="post" action="index.php?action=register&from=list" class="register-form">
             <label for="nome">Nome:</label>
             <input type="text" name="nome" id="nome" required>
 
@@ -23,7 +23,15 @@
 
             <button type="submit" class="btn">Cadastrar</button>
         </form>
-        <a href="index.php?action=login" class="back-link">Voltar ao Login</a>
+        <!-- Se vier cadastrar da página de lista de usuários -->
+        <?php
+        $from = isset($_GET['from']) ? $_GET['from'] : '';
+        if ($from === 'list') {
+        ?>
+            <a href="index.php?action=list" class="back-link">Voltar à Lista de Usuários</a>
+        <?php } else { ?>
+            <a href="index.php?action=login" class="back-link">Voltar ao Login</a>
+        <?php } ?>
     </div>
 </body>
 

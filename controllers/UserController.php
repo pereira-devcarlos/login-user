@@ -3,6 +3,7 @@
     class UserController {
         public function register(){
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $from = isset($_GET['from']) ? $_GET['from'] : '';
                 $data = [
                     'nome' => $_POST['nome'],
                     'email' => $_POST['email'],
@@ -11,8 +12,12 @@
                 ];
 
                 User::create($data);
-
-                header('Location: index.php');
+                // Redireciona para a lista de usuários se veio da página de lista, ou para o login
+                if ($from === 'list') {
+                    header('Location: index.php?action=list');
+                } else {
+                    header('Location: index.php');
+                }
             } else {
                 include 'views/register.php';
             }

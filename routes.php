@@ -31,6 +31,10 @@
             $id = $_GET['id'];
             $userController->edit($id);
             break;
+        case 'create':
+            // Ação para criar um novo usuário
+            $userController->register();
+            break;
         case 'delete':
             $id = $_GET['id'];
             $userController->delete($id);

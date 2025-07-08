@@ -30,7 +30,7 @@ body.admin .container {
 }
 
 body.admin h1 {
-    color: #ffcc00;
+    color: #27af94;
 }
 
 body.admin p{
@@ -38,7 +38,7 @@ body.admin p{
 }
 
 body.admin .btn {
-    background-color: #ffcc00;
+    background-color: #009879;
     color: black;
     border: none;
     padding: 10px 20px;
@@ -47,7 +47,7 @@ body.admin .btn {
 }
 
 body.admin .btn:hover {
-    background-color: #e6b800;
+    background-color: #007f66;
 }
 
 /* Estilo para Gestor */

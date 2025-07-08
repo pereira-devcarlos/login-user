@@ -65,6 +65,8 @@ if (isset($_SESSION['perfil'])):
             </div>
 
             <a href="index.php?action=dashboard" class="btn">Voltar ao Dashboard</a>
+            <!-- Adicionar botão de cadastrar novo usuário -->
+            <a href="index.php?action=register&from=list" class="btn">Cadastrar Novo Usuário</a>
         </div>
 
         <script>
