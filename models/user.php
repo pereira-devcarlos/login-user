@@ -46,6 +46,12 @@
             $stmt = $conn->query("SELECT * FROM usuarios");
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
+
+        public static function delete($id){
+            $conn = Database::getConnection();
+            $stmt = $conn->prepare("DELETE FROM usuarios WHERE id = :id");
+            $stmt->execute(['id' => $id]);
+        }
     }
 
 ?>
