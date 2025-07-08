@@ -16,7 +16,7 @@
                 if ($from === 'list') {
                     header('Location: index.php?action=list');
                 } else {
-                    header('Location: index.php');
+                    header('Location: index.php?action=login');
                 }
             } else {
                 include 'views/register.php';
