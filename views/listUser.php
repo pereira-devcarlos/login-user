@@ -43,7 +43,7 @@ if (isset($_SESSION['perfil'])):
 
                                 <!-- Permitir que apenas admin exclua -->
                                 <?php if ($_SESSION['perfil'] == 'admin'): ?>
-                                    <a href="#" class="btn-edit btn-delete" data-user-id="<?= $user['id'] ?>">Excluir</a>
+                                    <a href="#" id="btnDeleteUser" class="btn-edit btn-delete" data-user-id="<?= $user['id'] ?>">Excluir</a>
                                 <?php endif; ?>
                             </td>
                         </tr>
@@ -59,7 +59,7 @@ if (isset($_SESSION['perfil'])):
                 <p>Tem certeza que deseja excluir este usuário?</p>
                 <div class="modal-confirm-actions">
                   <button id="btnCancel" class="btn-edit" type="button">Cancelar</button>
-                  <a id="btnConfirmDelete" href="index.php?action=delete&id=<?= $user['id'] ?>" class="btn-edit btn-delete">Excluir</a>
+                  <button id="btnConfirmDelete" class="btn-edit btn-delete" type="button">Excluir</button>
                 </div>
               </div>
             </div>
@@ -68,29 +68,37 @@ if (isset($_SESSION['perfil'])):
         </div>
 
         <script>
-          document.querySelectorAll('.btn-delete').forEach(function(btn) {
+          let userIdToDelete = null;
+          const modal = document.getElementById('modalConfirm');
+          const confirmBtn = document.getElementById('btnConfirmDelete');
+          const cancelBtn = document.getElementById('btnCancel');
+
+          document.querySelectorAll('#btnDeleteUser').forEach(function(btn) {
             btn.addEventListener('click', function(e) {
               e.preventDefault();
-              var userId = this.getAttribute('data-user-id');
-              var modal = document.getElementById('modalConfirm');
-              var confirmBtn = document.getElementById('btnConfirmDelete');
-              confirmBtn.href = 'index.php?action=delete&id=' + userId;
+              userIdToDelete = this.getAttribute('data-user-id');
               modal.classList.add('show');
               modal.style.display = 'flex';
             });
           });
-          document.getElementById('btnCancel').onclick = function() {
-            var modal = document.getElementById('modalConfirm');
+
+          confirmBtn.addEventListener('click', function() {
+            if (userIdToDelete) {
+              window.location.href = "index.php?action=delete&id=" + userIdToDelete;
+            }
+          });
+
+          cancelBtn.addEventListener('click', function() {
             modal.classList.remove('show');
             setTimeout(function(){ modal.style.display = 'none'; }, 350);
-          };
-          document.getElementById('modalConfirm').onclick = function(e) {
+          });
+
+          modal.addEventListener('click', function(e) {
             if (e.target === this) {
               this.classList.remove('show');
-              var modal = this;
               setTimeout(function(){ modal.style.display = 'none'; }, 350);
             }
-          };
+          });
         </script>
     </body>
 
