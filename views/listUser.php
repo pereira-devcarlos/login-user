@@ -38,12 +38,12 @@ if (isset($_SESSION['perfil'])):
                             <td>
                                 <!-- Permitir que admin e gestor editem -->
                                 <?php if ($_SESSION['perfil'] == 'admin' || $_SESSION['perfil'] == 'gestor'): ?>
-                                    <a href="index.php?action=edit&id=<?= $user['id'] ?>" class="btn">Editar</a>
+                                    <a href="index.php?action=edit&id=<?= $user['id'] ?>" class="btn-edit">Editar</a>
                                 <?php endif; ?>
 
                                 <!-- Permitir que apenas admin exclua -->
                                 <?php if ($_SESSION['perfil'] == 'admin'): ?>
-                                    <a href="index.php?action=delete&id=<?= $user['id'] ?>" class="btn btn-delete" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+                                    <a href="index.php?action=delete&id=<?= $user['id'] ?>" class="btn-edit btn-delete" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
                                 <?php endif; ?>
                             </td>
                         </tr>

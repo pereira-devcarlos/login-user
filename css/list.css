@@ -53,7 +53,7 @@ h2 {
 }
 
 /* Estilo dos botões */
-.btn {
+.btn-edit {
     text-decoration: none;
     background-color: #009879;
     color: white;
@@ -64,7 +64,7 @@ h2 {
     text-align: center;
 }
 
-.btn:hover {
+.btn-edit:hover {
     background-color: #007a65;
 }
 
@@ -81,9 +81,44 @@ h2 {
     border-left: 5px solid #009879;
 }
 
+.admin .container .btn {
+    text-decoration: none;
+    background-color: #009879;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.admin .container .btn:hover {
+    background-color: #007a65;
+}
+
 /* Estilos específicos para o gestor */
 .gestor .container {
     border-left: 5px solid #ffcc00;
+}
+
+.gestor .container .styled-table thead tr {
+    background-color: #ffcc00;
+    color: #333;
+}
+
+.gestor .container .btn {
+    text-decoration: none;
+    background-color: #ffcc00;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.gestor .container .btn:hover {
+    background-color: #e6b800;
 }
 
 /* Estilos específicos para o colaborador */
