@@ -27,7 +27,8 @@
                     $data = [
                         'nome' => $_POST['nome'],
                         'email' => $_POST['email'],
-                        'perfil' => $_POST['perfil']
+                        'perfil' => $_POST['perfil'],
+                        'senha' => !empty($_POST['senha']) ? password_hash($_POST['senha'], PASSWORD_DEFAULT) : $user['senha'] // Mantém a senha original se não for alterada
                     ];
                     User::update($id, $data);
                     header('Location: index.php?action=list');
@@ -41,7 +42,8 @@
                     $data = [
                         'nome' => $_POST['nome'],
                         'email' => $_POST['email'],
-                        'perfil' => $user['perfil'] // Mantém o perfil original
+                        'perfil' => $user['perfil'], // Mantém o perfil original
+                        'senha' => !empty($_POST['senha']) ? password_hash($_POST['senha'], PASSWORD_DEFAULT) : $user['senha'] // Mantém a senha original se não for alterada
                     ];
                     User::update($id, $data);
                     header('Location: index.php?action=list');

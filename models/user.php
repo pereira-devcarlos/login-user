@@ -34,8 +34,8 @@
         // Função para atualizar o banco de dados
         public static function update($id, $data){
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("UPDATE usuarios SET nome = :nome, email = :email, perfil = :perfil WHERE id = :id");
-            
+            $stmt = $conn->prepare("UPDATE usuarios SET nome = :nome, email = :email, perfil = :perfil, senha = :senha WHERE id = :id");
+
             $data['id'] = $id;
 
             $stmt->execute($data);

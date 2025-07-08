@@ -18,6 +18,9 @@
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" value="<?= $user['email'] ?>" required>
 
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha" placeholder="Deixe em branco para não alterar">
+            
             <?php if ($_SESSION['perfil'] !== 'gestor'): ?>
                 <label for="perfil">Perfil:</label>
                 <select name="perfil" id="perfil">
