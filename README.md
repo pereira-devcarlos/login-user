@@ -61,7 +61,6 @@ CadLog-system/
 - senha (criptografada)
 - perfil (admin, gestor, colaborador)
 
-Script SQL para criação da tabela está disponível no arquivo [database.sql](database.sql).
 
 
 ## Como executar
@@ -75,7 +74,7 @@ git clone https://github.com/seu-usuario/CadLog-system.git
 2 - Importe o banco de dados no seu MySQL (verifique o arquivo .sql, se disponível).
 3 - Configure o acesso ao banco de dados no arquivo /config/db.php.
 4 - Execute o index.php em um servidor local (como XAMPP, WAMP, Laragon, etc).
-5 - Acesse pelo navegador: http://localhost/CadLog-system/
+5 - Acesse pelo navegador: http://localhost/login-user/
 
 
 ## 📚 Finalidade
